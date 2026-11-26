@@ -1,0 +1,56 @@
+name: Bug report
+description: Something did not work as expected
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this.
+
+        A minimal reproduction helps the most: the command you ran and the
+        receipt it printed.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Exact command
+      render: shell
+      placeholder: spillcheck -C demo --allow dist -- python gen.py
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Receipt and exit code
+      description: Paste the printed receipt, plus the exit code (`echo $?` / `$LASTEXITCODE`).
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      placeholder: "git rev-parse --short HEAD"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: OS and Python version
+      placeholder: "Windows 11, Python 3.12.4"
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Filesystem oddities, symlinks, network drives — optional.
+    validations:
+      required: false
