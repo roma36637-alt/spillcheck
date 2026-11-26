@@ -71,6 +71,14 @@ Run only commands you trust. This is a check, not a sandbox.
 python -m unittest -v
 ```
 
+## More small tools
+
+- **[envspy](https://github.com/roma36637-alt/envspy)** — run a command and see which environment variables it really reads (Python + Node).
+- **[repo-rpg](https://github.com/roma36637-alt/repo-rpg)** — turn a GitHub profile into an RPG character card (SVG).
+- **[smeta-delta](https://github.com/roma36637-alt/smeta-delta)** — explain *why* an estimate total changed (volume / unit price / composition).
+
+All of them: no dependencies, MIT, tested on Linux, macOS and Windows.
+
 ## License
 
 MIT.
